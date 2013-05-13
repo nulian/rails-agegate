@@ -1,0 +1,13 @@
+= Agegate
+
+in your Gemfile add:
+
+gem "agegate"
+
+to install the required files:
+
+$ bundle install
+$ rails g agegate:install
+
+
+This project rocks and uses MIT-LICENSE.
