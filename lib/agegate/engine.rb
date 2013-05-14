@@ -1,4 +1,4 @@
-require 'agegate/route_extensions'
+# require 'agegate/route_extensions'
 
 module Agegate
   class Engine < ::Rails::Engine
@@ -17,7 +17,12 @@ module Agegate
 
     # DSL to include the routes
     initializer 'agegate.new_routes', :after => 'action_dispatch.prepare_dispatcher' do |app|
-      ActionDispatch::Routing::Mapper.send(:include, Agegate::RouteExtensions)
+      ActionDispatch::Routing::Mapper.send(:include, Agegate::RouteExtensions)    
     end
+
+    initializer "agegate.load_helpers" do |app|
+      ActionController::Base.send :include, Agegate::GatesHelper
+    end    
+
   end
 end

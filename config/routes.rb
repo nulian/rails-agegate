@@ -1,4 +1,4 @@
 Agegate::Engine.routes.draw do
-  get "gate/index"
-  get "gate/denied"
+  resource "gates"
+  get "denied" => "gates#denied", :as => "denied"
 end

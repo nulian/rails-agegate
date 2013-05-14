@@ -1,0 +1,11 @@
+<%= form_tag(:controller => "gate", :action => "check", :method => "post") do %>
+  <%= label_tag :birthday, "Please insert you date of birth" %>
+  <%= date_select(
+    "user", "birthday",
+    :order => [:day, :month, :year],
+    :start_year => Time.now.year - 100,
+    :end_year =>  Time.now.year - 10,
+    :prompt => { :day => 'day', :month => 'month', :year => 'year' })
+  %>
+  <%= submit_tag("Check") %>
+<% end %>
