@@ -11,7 +11,6 @@ module Agegate
     config.agegate = ActiveSupport::OrderedOptions.new
     config.before_configuration do |app|
       app.config.agegate.min_age = 18
-      app.config.agegate.set_cookie = true
       app.config.agegate.skip = false
     end
 

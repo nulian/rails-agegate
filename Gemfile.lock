@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    agegate (0.0.1)
+    rails-agegate (0.0.2)
       rails (~> 3.2.12)
 
 GEM
@@ -224,7 +224,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  agegate!
   better_errors
   binding_of_caller
   capybara
@@ -236,6 +235,7 @@ DEPENDENCIES
   launchy
   pry-rails
   quiet_assets
+  rails-agegate!
   rb-fsevent
   rspec-rails
   sqlite3

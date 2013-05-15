@@ -1,13 +1,35 @@
 = Agegate
 
+A simple "active" agegate.
+
+== Install
+
 in your Gemfile add:
 
-gem "agegate"
+  gem "rails-agegate", :git => 'git://github.com/losco/rails-agegate.git'
 
-to install the required files:
+and run:
 
-$ bundle install
-$ rails g agegate:install
+  $ bundle install
 
+== Setting up
 
-This project rocks and uses MIT-LICENSE.
+Just run:
+
+  $ rails generate agegate:install
+
+In you application_controller.rb file add:
+  
+  before_filter :check_agegate
+
+and you are good to go.
+
+== Configure
+
+Add the following to your configuration, if you need to override one of the default values. This can go in config/application.rb, or customized in each environment in config/environments/[name].rb:
+
+  config.agegate.skip = false
+  config.agegate.min_age = 18
+
+TODO:
+  tests!

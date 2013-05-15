@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  # include agegate routes
   use_agegate
 
-  # mount Agegate::Engine => "/agegate"
-  # root to: "agegate/gate#show"
+  # test pages
+  get "other" => "page#show"
   root to: "page#show"
 end
