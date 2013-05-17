@@ -6,7 +6,7 @@ A simple "active" agegate.
 
 in your Gemfile add:
 
-  gem "rails-agegate", :git => 'git://github.com/losco/rails-agegate.git'
+  gem "agegate", :git => 'git://github.com/losco/rails-agegate.git'
 
 and run:
 

@@ -5,7 +5,7 @@ require "agegate/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "rails-agegate"
+  s.name        = "agegate"
   s.version     = Agegate::VERSION
   s.authors     = ["Francesco Grammatico"]
   s.email       = [""]

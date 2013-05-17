@@ -23,7 +23,6 @@ module Agegate
 
         if @gate.gate_pass?
           cookies[:gate] = 1
-          # redirect_to params[:referrer]
           redirect_back_or_default main_app.root_url
         else
           cookies[:gate] = 0
