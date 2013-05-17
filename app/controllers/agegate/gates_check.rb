@@ -1,5 +1,5 @@
 module Agegate
-  module GatesHelper
+  module GatesCheck
 
     def check_agegate
       return if Rails.application.config.agegate.skip

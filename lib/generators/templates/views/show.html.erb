@@ -1,16 +1,4 @@
 <h1>Age gate</h1>
 <div class="gate">
-  <%= form_for @gate do |f| %>
-    <%= f.label :birthday, "Please insert your date of birth" %>
-    <%= f.date_select(
-      :birthday,
-      :order => [:day, :month, :year],
-      :start_year => Time.now.year - 100,
-      :end_year =>  Time.now.year - 10,
-      :prompt => { :day => 'day', :month => 'month', :year => 'year' })
-    %>
-    <%= hidden_field_tag :referrer, request.referer %>
-    <%= f.submit "Check" %>
-  <% end %>
-
+<%= render 'form' %>
 </div>

@@ -30,6 +30,3 @@ Add the following to your configuration, if you need to override one of the defa
 
   config.agegate.skip = false
   config.agegate.min_age = 18
-
-TODO:
-  tests!

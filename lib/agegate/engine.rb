@@ -5,7 +5,11 @@ module Agegate
     isolate_namespace Agegate
 
     # default test framework
-    config.app_generators.test_framework :rspec
+    config.generators do |g|                                                               
+      g.test_framework :rspec
+      g.integration_tool :rspec
+      g.fixture_replacement :factory_girl, :dir => 'spec/factories'
+    end
 
     # default options, we can override it in the initializer
     config.agegate = ActiveSupport::OrderedOptions.new
@@ -20,7 +24,7 @@ module Agegate
     end
 
     initializer "agegate.load_helpers" do |app|
-      ActionController::Base.send :include, Agegate::GatesHelper
+      ActionController::Base.send :include, GatesCheck
     end    
 
   end

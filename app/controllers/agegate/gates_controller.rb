@@ -2,6 +2,7 @@ require_dependency "agegate/application_controller"
 
 module Agegate
   class GatesController < ApplicationController
+    layout 'agegate/gates/application'
 
     def show
       unless cookies[:gate].blank?

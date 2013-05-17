@@ -28,14 +28,10 @@ module Agegate
  
     def convert_date(hash, date_symbol_or_string)
       attribute = date_symbol_or_string.to_s
-      if hash.has_value?('')
+      if hash.nil? || hash.empty? || hash.has_value?('')
         nil
       else
-        begin
-          Date.new(hash[attribute + '(1i)'].to_i, hash[attribute + '(2i)'].to_i, hash[attribute + '(3i)'].to_i)
-        rescue
-          nil
-        end
+        Date.new(hash[attribute + '(1i)'].to_i, hash[attribute + '(2i)'].to_i, hash[attribute + '(3i)'].to_i)
       end
     end
 
