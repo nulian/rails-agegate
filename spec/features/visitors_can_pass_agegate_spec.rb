@@ -1,4 +1,4 @@
-# spec/acceptance/visitors_can_pass_agegate_spec.rb
+# spec/features/visitors_can_pass_agegate_spec.rb
 require 'spec_helper'
 
 describe 'agegate' do

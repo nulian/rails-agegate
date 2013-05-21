@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    agegate (0.0.3)
+    agegate (0.0.4)
       rails (~> 3.2.12)
 
 GEM
