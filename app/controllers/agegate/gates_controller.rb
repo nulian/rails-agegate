@@ -22,10 +22,16 @@ module Agegate
       if @gate.valid?
 
         if @gate.gate_pass?
-          cookies[:gate] = 1
+          cookies[:gate] = {
+            :value => 1,
+            :expires => 1.year.from_now
+          }
           redirect_back_or_default main_app.root_url
         else
-          cookies[:gate] = 0
+          cookies[:gate] = {
+            :value => 0,
+            :expires => 1.day.from_now
+            }
           redirect_to denied_url
         end
       else
