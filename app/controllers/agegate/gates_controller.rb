@@ -20,8 +20,9 @@ module Agegate
     def create
       @gate = Gate.new(params[:gate])
       if @gate.valid?
-
-        if @gate.gate_pass?
+        if cookies[:gate] == "0"
+          redirect_to denied_url
+        elsif @gate.gate_pass?
           cookies[:gate] = {
             :value => 1,
             :expires => 1.year.from_now

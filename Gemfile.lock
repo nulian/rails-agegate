@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    agegate (0.0.4)
+    agegate (0.0.5)
       rails (~> 3.2.12)
 
 GEM
@@ -110,8 +110,7 @@ GEM
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
     lumberjack (1.0.3)
-    mail (2.5.3)
-      i18n (>= 0.4.0)
+    mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     method_source (0.8.1)
